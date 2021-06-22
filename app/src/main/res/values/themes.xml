@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    //glide报错缺失
+    <item name="glide_tag" type="id" />
+
+    <!-- Base application theme. -->
+    <style name="Theme.SouthPlatform" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- TipToast -->
+    <style name="ToastTipLayoutStyle">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">@dimen/dp_160</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_solid_grey_radius_12</item>
+    </style>
+
+    <style name="ToastTipViewStyle">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/dp_10</item>
+    </style>
+
+    <style name="ToastTipTxtStyle">
+        <item name="android:layout_width">@dimen/dp_100</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:layout_marginBottom">@dimen/dp_10</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.southplatform"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            // 移除无用的resource文件
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'org.jetbrains:annotations:15.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'//转换器，请求结果转换成Model
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'//配合Rxjava 使用
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+
+    //RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.6'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    //rxbinding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    //liveEventBus
+    implementation 'com.jeremyliao:live-event-bus-x:1.7.2'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+
+    implementation "com.github.AriesHoo.UIWidget:widget-core:3.2.25"
+    implementation "com.github.AriesHoo.UIWidget:widget-alert:3.2.25"
+    implementation "com.github.AriesHoo.UIWidget:widget-collapsing:3.2.25"
+    implementation "com.github.AriesHoo.UIWidget:tab-layout:3.2.25"
+    implementation 'com.github.AriesHoo:FastLib:2.4.0'
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.1'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.1'
+    implementation 'com.scwang.smart:refresh-footer-classics:2.0.1'
+
+    //MaterialDialog
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    //文件选择器
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.1'
+    //  AndroidX 的应用
+    implementation 'pub.devrel:easypermissions:3.0.0'
+}

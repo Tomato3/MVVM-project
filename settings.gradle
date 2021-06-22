@@ -1,0 +1,2 @@
+rootProject.name = "SouthPlatform"
+include ':app'

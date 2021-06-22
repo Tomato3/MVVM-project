@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ToastTipLayoutStyle">
+
+    <ImageView
+        android:id="@+id/imageView"
+        style="@style/ToastTipViewStyle" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/ToastTipTxtStyle" />
+</LinearLayout>
