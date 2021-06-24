@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
 
@@ -16,6 +17,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.aries.library.fast.util.ToastUtil;
+import com.aries.ui.helper.navigation.KeyboardHelper;
 import com.aries.ui.view.title.TitleBarView;
 import com.example.southplatform.R;
 import com.example.southplatform.utils.DialogUtil;
@@ -223,6 +225,12 @@ public abstract class BaseActivity<DB extends ViewDataBinding,VM extends BaseVie
         dataBinding.setVariable(viewModelId, viewModel);
         //将当前当前activity设为生命周期的拥有者
         dataBinding.setLifecycleOwner(this);
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        KeyboardHelper.handleAutoCloseKeyboard(true, getCurrentFocus(), ev, this);
+        return super.dispatchTouchEvent(ev);
     }
 
     @Override

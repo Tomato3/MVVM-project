@@ -2,9 +2,7 @@ package com.example.southplatform.ui.activity.main;
 
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
-
 import com.bumptech.glide.Glide;
 import com.example.southplatform.BR;
 import com.example.southplatform.R;
@@ -14,6 +12,7 @@ import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnRefreshLoadMoreListener;
 
 import org.jetbrains.annotations.NotNull;
+
 
 public class MainActivity extends BaseActivity<ActivityMainBinding,MainViewModel> {
     private Context mContext;

@@ -85,4 +85,11 @@ dependencies {
     implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.1'
     //  AndroidX 的应用
     implementation 'pub.devrel:easypermissions:3.0.0'
+    //滑动返回Activity
+    implementation 'com.github.ParfoisMeng:SlideBack:1.0.6'
+    //检查内存泄露
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
 }

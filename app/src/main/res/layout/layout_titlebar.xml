@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.aries.ui.view.title.TitleBarView
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<com.aries.ui.view.title.TitleBarView
     android:id="@+id/titleBar"
     android:layout_width="match_parent"
     android:layout_height="48dp"
@@ -19,3 +23,5 @@
     app:title_titleMainText="@string/app_name"
     app:title_titleMainTextColor="@color/colorTextBlack"
     app:title_titleSubTextColor="@color/colorTextBlack"/>
+
+</RelativeLayout>

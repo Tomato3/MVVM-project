@@ -5,8 +5,6 @@ import android.os.Bundle;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.aries.ui.view.title.TitleBarView;
-
 import java.util.HashMap;
 import java.util.Map;
 

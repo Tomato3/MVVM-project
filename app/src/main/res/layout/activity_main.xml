@@ -9,19 +9,23 @@
             type="com.example.southplatform.ui.activity.main.MainViewModel" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ui.activity.main.MainActivity">
 
-        <include
-            layout="@layout/layout_titlebar"/>
+
+            <include
+                android:id="@+id/layout_header"
+                layout="@layout/layout_titlebar"/>
+
 
         <com.scwang.smart.refresh.layout.SmartRefreshLayout
             android:id="@+id/smartLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/layout_header">
 
             <ImageView
                 android:id="@+id/image"
@@ -30,5 +34,5 @@
 
         </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 </layout>
